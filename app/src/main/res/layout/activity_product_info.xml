@@ -6,4 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".ProductInfo">
 
+        <TextView
+            android:id="@+id/txtAddProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="212dp"
+            android:text="@string/view_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/updateProductName"
+            android:layout_width="168dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="57dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:text="@string/product_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAddProducts"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/updateProductPrice"
+            android:layout_width="168dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="57dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:text="@string/product_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateProductName"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/updateProductDesc"
+            android:layout_width="174dp"
+            android:layout_height="134dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="51dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/product_description"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateProductPrice"
+            tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="97dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="392dp"
+            android:text="@string/product_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/txtProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="76dp"
+            android:text="@string/product_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/txtProductDesc"
+            android:layout_width="97dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="224dp"
+            android:text="@string/product_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/txtProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="88dp"
+            android:text="@string/product_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/updateLat"
+            android:layout_width="168dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="57dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:text="@string/latitude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateProductDesc"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/updateLong"
+            android:layout_width="168dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="57dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:text="@string/longitude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLat"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/btnUpdateProduct"
+            android:layout_width="117dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="157dp"
+            android:text="@string/update_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLong" />
+
+        <Button
+            android:id="@+id/btnDeleteProduct"
+            android:layout_width="117dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="176dp"
+            android:layout_marginEnd="157dp"
+            android:text="@string/delete_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLong" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

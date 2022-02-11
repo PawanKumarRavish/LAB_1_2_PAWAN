@@ -58,6 +58,35 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void updateProduct( String productId, String productName, String productPrice, String productDescription, String productLocation) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(PRODUCT_NAME_COL, productName);
+        values.put(PRICE_COL, productPrice);
+        values.put(DESCRIPTION_COL, productDescription);
+        values.put(LOCATION_COL, productLocation);
+
+        db.update(TABLE_NAME, values, "id = ?", new String[]{productId});
+
+        db.close();
+    }
+
+    public Cursor searchProduct(String searchString)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME + "where name like "+searchString+" or description like "+searchString , null);
+        return res;
+    }
+
+    public void deleteProduct(String productId) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NAME, "id = ?", new String[]{productId});
+        db.close();
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // this method is called to check if the table exists already.
@@ -69,7 +98,6 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_NAME, null);
         return res;
-
     }
 
 }

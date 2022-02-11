@@ -33,6 +33,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.MyViewHolder holder, int position) {
+        String Id = productDataset.get(position).get("Id");
         String Name = productDataset.get(position).get("Name");
         String Price = productDataset.get(position).get("Price");
         String Description = productDataset.get(position).get("Description");
@@ -48,6 +49,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                 int clickedContentPosition = holder.getAdapterPosition();
                 Context context = holder.itemView.getContext();
                 Intent intent = new Intent(context, ProductInfo.class);
+                intent.putExtra("productId",Id);
                 intent.putExtra("productName",Name);
                 intent.putExtra("productPrice",Price);
                 intent.putExtra("productDescription",Description);
