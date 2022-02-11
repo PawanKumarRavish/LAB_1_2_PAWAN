@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LAB_1_2</string>
+    <string name="add_products">Add Products</string>
+    <string name="add_to_products">Add Product</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Product Price</string>
+    <string name="product_description">Product Description</string>
+    <string name="product_location">Product Location</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+</resources>

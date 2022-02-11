@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtAddProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="184dp"
+        android:text="@string/add_products"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="83dp"
+        android:text="@string/product_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editProductName"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="57dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtProductName"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddProducts"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/txtProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/product_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+    <EditText
+        android:id="@+id/editProductPrice"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="57dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtProductPrice"
+        app:layout_constraintTop_toBottomOf="@+id/editProductName"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/txtProductDesc"
+        android:layout_width="97dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="224dp"
+        android:text="@string/product_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+    <EditText
+        android:id="@+id/editProductDesc"
+        android:layout_width="174dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/product_description"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtProductDesc"
+        app:layout_constraintTop_toBottomOf="@+id/editProductPrice" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="97dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="392dp"
+        android:text="@string/product_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+    <EditText
+        android:id="@+id/editLat"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="57dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/latitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProductDesc"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/editLong"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="57dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/longitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtLocation"
+        app:layout_constraintTop_toBottomOf="@+id/editLat"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/btnAddProduct"
+        android:layout_width="117dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="157dp"
+        android:text="@string/add_to_products"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLong" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
